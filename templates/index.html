@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mark Predictor</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+ }
+
+  
+    img {
+      display: block;
+      margin: 20px 0;
+      width: 100%;
+      height: auto;
+    }
+    
+    form {
+      text-align: center;
+      margin-top: 40px;
+    }
+    
+    input[type="number"] {
+      width: 200px;
+      height: 30px;
+      padding: 5px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .button_cont {
+      margin-top: 20px;
+    }
+    
+    .button_css {
+      color: #494949 !important;
+      text-transform: uppercase;
+      text-decoration: none;
+      background: #ffffff;
+      padding: 10px 20px;
+      border: 2px solid #494949 !important;
+      display: inline-block;
+      transition: all 0.4s ease 0s;
+      font-size: 14px;
+    }
+    
+    .button_css:hover {
+      color: #ffffff !important;
+      background: #f6b93b;
+      border-color: #f6b93b !important;
+      transition: all 0.4s ease 0s;
+    }
+    
+    .prediction {
+      text-align: center;
+      margin-top: 40px;
+    }
+    
+    h2 {
+      color: #333;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+  
+    <img src="static/images/MARK PREDICTOR.png" alt="banner">
+    
+    <form action="{{ url_for('predict') }}" method="post">
+      <h2>Enter Your Study Hours to Predict Marks</h2>
+      
+      <input type="number" name="study_hours" placeholder="Study hours" required>
+      
+      <div class="button_cont">
+        <button type="submit" class="button_css">Predict Marks</button>
+      </div>
+    </form>
+    
+    <div class="prediction">
+      <h2>{{prediction_text}}</h2>
+    </div>
+  </div>
+</body>
+</html>
