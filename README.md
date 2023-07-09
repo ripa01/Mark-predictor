@@ -1,7 +1,7 @@
 # ML Mark Predictor
 
-This is a machine learning-based application that predicts student marks based on their study hours. The prediction is calculated using the Linear Regression algorithm. The application is deployed using Flask, a Python web framework.
-
+**This is a machine learning-based application that predicts student marks based on their study hours. The prediction is calculated using the Linear Regression algorithm. The application is deployed using Flask, a Python web framework.**
+![Mark predictor](./static/images/ss.png)
 
 ## Getting Started
 
